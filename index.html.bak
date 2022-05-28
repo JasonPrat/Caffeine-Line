@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/index.css">
+	<title>Cafein Line</title>
+</head>
+<body>
+	<div class="header">
+		<div class="navigation-bar">
+			<nav>
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+				</div>
+				<ul class="navigation-links">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<div class="beverages">
+						<button class="beverages-button" onclick="beveragesDropDown()">Beverages</button>
+						<div class="beverages-dropdown" id="beverages-dropdown-content">
+							<a href="#">Coffe</a>
+							<a href="#">Tea</a>
+						</div>
+					</div>
+					<div class="dessert">
+						<button class="dessert-button" onclick="dessertDropDown()">Dessert</button>
+						<div class="dessert-dropdown" id="dessert-dropdown-content">
+							<a href="#">Alongside with Coffe</a>
+							<a href="#">Alongside with Tea</a>
+						</div>
+					</div>
+					<li>
+						<a href="contact-us.html">Contact Us</a>
+					</li>
+					<li>
+						<a href="payment.html">Payment</a>
+					</li>
+				</ul>
+				<div class="burger">
+					<div class="line-1"></div>
+					<div class="line-2"></div>
+					<div class="line-3"></div>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<br/><br/><br/>
+	<div class="slideshow-container">
+		<div class="slideshow-content fade">
+			<img src="images/slider-1.jpg" alt="">
+		</div>
+		<div class="slideshow-content fade">
+			<img src="images/slider-2.jpg" alt="">
+		</div>
+		<div class="slideshow-content fade">
+			<img src="images/slider-3.jpg" alt="">
+		</div>
+		<div class="slideshow-content fade">
+			<img src="images/slider-4.jpg" alt="">
+		</div>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<br/>
+	<div class="clicker">
+		<span class="dot" onclick="currentSlide(1)"></span>
+		<span class="dot" onclick="currentSlide(2)"></span>
+		<span class="dot" onclick="currentSlide(3)"></span>
+		<span class="dot" onclick="currentSlide(4)"></span>
+	</div>
+	<br/>
+	<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/payment.css">
+	<link rel="icon" type="image/png" href="images/logo.png">
+	<title>Caffein Line</title>
+</head>
+<body>
+	<div class="header">
+		<div class="navigation-bar">
+			<nav>
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+				</div>
+				<ul class="navigation-links">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<div class="beverages">
+						<button class="beverages-button" onclick="beveragesDropDown()">Beverages</button>
+						<div class="beverages-dropdown" id="beverages-dropdown-content">
+							<a href="beverages-coffe.html">Coffee</a>
+							<a href="beverages-tea.html">Tea</a>
+						</div>
+					</div>
+					<div class="dessert">
+						<button class="dessert-button" onclick="dessertDropDown()">Dessert</button>
+						<div class="dessert-dropdown" id="dessert-dropdown-content">
+							<a href="dessert-coffe.html">Alongside with Coffee</a>
+							<a href="dessert-tea.html">Alongside with Tea</a>
+						</div>
+					</div>
+					<li>
+						<a href="contact-us.html">Contact Us</a>
+					</li>
+					<li>
+						<a href="payment.html">Payment</a>
+					</li>
+				</ul>
+				<div class="burger">
+					<div class="line-1"></div>
+					<div class="line-2"></div>
+					<div class="line-3"></div>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<br/>
+	<div class="free-delivery">
+		<h3>Free delivery, anywhere, anytime, for any price.</h3>
+	</div>
+	<br/>
+	<div class="container">
+		<h2 id="container_title">Payment</h2>
+		<div class="row">
+			<div class="column">
+				<form>
+					<label for="name">Full Name</label>
+					<input type="text" id="name_input" placeholder="Name">
+					<label for="email">Email</label>
+					<input type="email" id="email_input" placeholder="Email">
+					<label for="city">City</label>
+					<input type="text" id="city_input" placeholder="City">
+					<label for="address">Address</label>
+					<input type="text" id="address_input" placeholder="Address">
+					<label for="payment_method">Payment Method</label>
+					<select id="payment_method" onchange="show_visa_payment('visa_payment_method', this)">
+						<option value="0" selected="selected">Select payment method</option>
+						<option value="1">Paypal</option>
+						<option value="2">Visa</option>
+					</select>
+					<div class="visa_payment" id="visa_payment_method">
+						<label for="card_name">Name on Card</label>
+						<input type="text" id="card_name_input" placeholder="Name on card">
+						<label for="ccnum">Credit Card Number</label>
+						<input type="text" id="ccnum_input" placeholder="XXXX-XXXX-XXXX-XXXX">
+						<label for="validity">Validity</label>
+						<select id="validity_input_month">
+							<option value="0" selected="selected">Select expired month</option>
+							<option value="1">January</option>
+							<option value="2">February</option>
+							<option value="3">March</option>
+							<option value="4">April</option>
+							<option value="5">May</option>
+							<option value="6">June</option>
+							<option value="7">July</option>
+							<option value="8">August</option>
+							<option value="9">September</option>
+							<option value="10">October</option>
+							<option value="11">November</option>
+							<option value="12">December</option>
+						</select>
+						<select id="validity_input_year">
+							<option value="0" selected="selected">Select expired year</option>
+							<option value="1">2021</option>
+							<option value="2">2022</option>
+							<option value="3">2023</option>
+							<option value="4">2024</option>
+							<option value="5">2025</option>
+							<option value="6">2026</option>
+							<option value="7">2027</option>
+							<option value="8">2028</option>
+							<option value="9">2029</option>
+							<option value="10">2030</option>
+						</select>
+						<label for="cvv">CVV</label>
+						<input type="text" id="cvv_input" placeholder="XXX">
+					</div>
+					<label class="i_agree">
+						<input type="checkbox" checked="checked" id="agree"> i agree to terms and conditions.
+					</label>
+					<br/>
+					<button onclick="driver()" id="proceed-button">Proceed</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>Copyright ©2021 Cafein Line. All right reserved</p>
+	</div>
+	<script src="js/payment.js"></script>
+</body>
+</html>

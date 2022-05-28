@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <title>Hello World</title>
+</head>
+<body>
+
+<script>
+
+do{
+    alert("Mari bermain tebak Angka");
+
+    angkarandom = Math.random() * 100 + 1;
+    angkarandom = Math.floor(angkarandom);
+    console.log("angka random: " + angkarandom);
+
+    tebak  = prompt("Tebak angka antara 0-100");
+    while(tebak!=angkarandom) {
+        if (tebak < angkarandom) {
+            tebak = prompt(tebak + " terlalu kecil, tebak lagi?")
+            document.write(tebak+" terlalu kecil")
+            document.write("<br>")
+        } else if (tebak> angkarandom){
+            tebak = prompt(tebak + " terlalu besar, tebak lagi?")
+            document.write(tebak+" terlalu besar")
+            document.write("<br>")
+        } 
+        if (tebak==angkarandom){
+            break;
+        }
+
+    } 
+    prompt("PAS BANGET Tebakan kamu " + tebak)
+    document.writeln("PAS BANGET Tebakan kamu " + tebak)
+    main_lagi = confirm("Main lagi?");
+} while (main_lagi == true);
+
+alert("Makasih ya udah nyobain!")
+
+</script>
+
+</body>
+</html>

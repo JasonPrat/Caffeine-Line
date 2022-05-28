@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/contact_us.css">
+	<link rel="icon" type="image/png" href="images/logo.png">
+	<title>Caffein Line</title>
+</head>
+<body>
+	<div class="header">
+		<div class="navigation-bar">
+			<nav>
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+				</div>
+				<ul class="navigation-links">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<div class="beverages">
+						<button class="beverages-button" onclick="beveragesDropDown()">Beverages</button>
+						<div class="beverages-dropdown" id="beverages-dropdown-content">
+							<a href="beverages-coffe.html">Coffee</a>
+							<a href="beverages-tea.html">Tea</a>
+						</div>
+					</div>
+					<div class="dessert">
+						<button class="dessert-button" onclick="dessertDropDown()">Dessert</button>
+						<div class="dessert-dropdown" id="dessert-dropdown-content">
+							<a href="dessert-coffe.html">Alongside with Coffee</a>
+							<a href="dessert-tea.html">Alongside with Tea</a>
+						</div>
+					</div>
+					<li>
+						<a href="contact-us.html">Contact Us</a>
+					</li>
+					<li>
+						<a href="payment.html">Payment</a>
+					</li>
+				</ul>
+				<div class="burger">
+					<div class="line-1"></div>
+					<div class="line-2"></div>
+					<div class="line-3"></div>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<br/>
+	<div class="free-delivery">
+		<h3>Free delivery, anywhere, anytime, for any price.</h3>
+	</div>
+	<br/><br/>
+	<div class="container">
+		<div id="contact-us-title">
+			<h2>Contact Us</h2>
+		</div>
+		<div class="row">
+			<div class="column">
+				<form>
+					<label for="name">Name</label>
+					<input type="text" id="name-input" name="name" placeholder="Name">
+					<label for="email">Email</label>
+					<input type="email" id="email-input" name="email" placeholder="Email">
+					<label for="message">Message</label>
+					<textarea id="message-input" name="message" placeholder="Your message" style="height: 170px;"></textarea>
+					<button onclick="driver()" id="submit-button">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>Copyright ©2021 Cafein Line. All right reserved</p>
+	</div>
+	<script src="js/contact_us.js"></script>
+</body>
+</html>
